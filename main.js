@@ -1,6 +1,7 @@
 "use strict"
 // template for rendering one coffee: create a variable and build a HUGE STRING of how the html is going to look
 function renderCoffee(coffee) {
+
     var html = '<div class="coffee card d-flex">';
     // html += '<div>' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
@@ -12,6 +13,7 @@ function renderCoffee(coffee) {
 //     html += '<div>' + coffee.name + '</div>';
 //     html += '<div>' + coffee.roast + '</div>';
 //     html += '<div>';
+
     return html;
 }
 
