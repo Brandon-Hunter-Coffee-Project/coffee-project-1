@@ -12,6 +12,25 @@ h1 {
 
 }
 
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+}
+
+#roast-selection {
+    justify-content: center;
+    width: 18em;
+}
+
+#submit {
+    width: 18em;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
