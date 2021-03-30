@@ -1,17 +1,21 @@
-
-
 "use strict"
-
+// template for rendering one coffee: create a variable and build a HUGE STRING of how the html is going to look
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee card d-flex">';
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<div>' + coffee.name + '</div>';
+    html += '<div>' + coffee.roast + '</div>';
+    html += '</div>';
 
+//     var html = '<div class="coffee col-sm">';
+//     html += '<div>' + coffee.id + '</div>';
+//     html += '<div>' + coffee.name + '</div>';
+//     html += '<div>' + coffee.roast + '</div>';
+//     html += '<div>';
     return html;
 }
 
+//Okay: I've got a template, but I have X coffees: run all the coffees through another function
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -29,7 +33,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeBody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -50,10 +54,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var coffeeBody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+//From the first two functions: where's all that HTML we made in javascript? Throw it into tbody (
+coffeeBody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
