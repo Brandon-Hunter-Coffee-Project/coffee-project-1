@@ -7,19 +7,11 @@ h1 {
 
 .roast-header1 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    right: 26%;
+    position: relative;
     font-family: Baskerville;
 
-}
-
-.form {
-    display: flex;
-    justify-content: center;
-}
-
-.select {
-    display: flex;
-    justify-content: center;
 }
 
 #roast-selection {
@@ -27,26 +19,60 @@ h1 {
     width: 18em;
 }
 
+.form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.select {
+    float: right;
+    position: relative;
+    top: 3em;
+    left: 32%;
+
+}
+
+
+
 #submit {
-    width: 18em;
+    position: relative;
+    top: 7em;
 }
 
 .container1 {
     border: 3px solid red;
+    display: flex;
+    float: right;
+
 
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-    font-family: Baskerville;
-    font-size: large;
+.container2 {
+    position: relative;
+    float: right;
+    left: 39em;
+    bottom: 38%;
+}
+
+.container3 {
+    border: 3px solid blue;
+    display: flex;
+    flex-direction: row;
 
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*    font-family: Baskerville;*/
+/*    font-size: large;*/
+
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
 

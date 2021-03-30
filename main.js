@@ -3,12 +3,17 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    // var html = '<tr class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.roast + '</td>';
+    // html += '</tr>';
 
+    var html = '<div class="coffee col-sm">';
+    html += '<div>' + coffee.id + '</div>';
+    html += '<div>' + coffee.name + '</div>';
+    html += '<div>' + coffee.roast + '</div>';
+    html += '<div>';
     return html;
 }
 
