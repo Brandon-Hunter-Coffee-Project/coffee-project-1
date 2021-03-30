@@ -1,9 +1,27 @@
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Baskerville;
+}
+
+.roast-header1 {
+    display: flex;
+    justify-content: center;
+    font-family: Baskerville;
+
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
+    font-family: Baskerville;
+    font-size: large;
 }
 
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+
