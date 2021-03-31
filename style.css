@@ -23,7 +23,27 @@ h1 {
 
 }
 
-/*.select {*/
+#submit {
+    position: relative;
+    top: 1em;
+    width: 12em;
+}
+
+.search-button {
+    width: 18em;
+}
+
+.coffee-mame {
+    margin-top: 1em;
+    font-weight: 355;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+
 /*    float: right;*/
 /*    position: relative;*/
 /*    top: 3em;*/
@@ -33,10 +53,7 @@ h1 {
 
 
 
-#submit {
-    position: relative;
-    top: 7em;
-}
+
 
 /*.container1 {*/
 /*    border: 3px solid red;*/
