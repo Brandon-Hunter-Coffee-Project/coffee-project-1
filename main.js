@@ -29,6 +29,12 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    // What if we could grab what the user was typing?
+    // First step: We need to target the input
+    // second step, grab the value of it
+    // Third step: We need to USE that value to FILTER
+    // coffee.name === userInput? [match my coffee.name with the input value]
+
     var filteredCoffees = [];
 
     coffees.forEach(function(coffee) {
@@ -38,31 +44,8 @@ function updateCoffees(e) {
     });
     coffeeBody.innerHTML = renderCoffees(filteredCoffees);
 }
-// Just an Example
 
-// function myFunction() {
-//     // Declare variables
-//     var input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById('myInput');
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName('li');
-//
-//     // Loop through all list items, and hide those who don't match the search query
-//     for (i = 0; i < li.length; i++) {
-//         a = li[i].getElementsByTagName("a")[0];
-//         txtValue = a.textContent || a.innerText;
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
 
-function findCoffee(coffeeName, searchString){
-    return coffeeName.toLowerCase().substr(0,searchString.length).includes(searchString.toLowerCase());
-}
 
 
 
