@@ -1,3 +1,5 @@
+
+
 h1 {
     display: flex;
     justify-content: center;
@@ -7,8 +9,12 @@ h1 {
 .roast-header1 {
     font-family: Baskerville;
     font-size: x-large;
+}
 
-
+.roast-header2 {
+    font-family: Baskerville;
+    font-size: x-large;
+    margin: 1em;
 }
 
 #roast-selection {
@@ -17,15 +23,29 @@ h1 {
 
 }
 
+#roast-selection1 {
+    text-align: center;
+    width: 18em;
+}
+
 .form {
     display: flex;
     justify-content: center;
 
 }
 
+.form1 {
+    display: flex;
+    justify-content: center;
+}
+
 #submit {
     position: relative;
-    top: 1em;
+    width: 12em;
+}
+
+#submit1 {
+    position: relative;
     width: 12em;
 }
 
@@ -38,9 +58,9 @@ h1 {
     font-weight: 355;
 }
 
-form{
+#coffee-name-search {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 

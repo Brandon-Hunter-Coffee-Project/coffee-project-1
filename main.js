@@ -20,7 +20,7 @@ function renderCoffee(coffee) {
 //Okay: I've got a template, but I have X coffees: run all the coffees through another function
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -35,10 +35,11 @@ function updateCoffees(e) {
     // Third step: We need to USE that value to FILTER
     // coffee.name === userInput? [match my coffee.name with the input value]
 
+    var coffeeName = coffeeNameSearch.value;
     var filteredCoffees = [];
 
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(coffeeName.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
@@ -72,7 +73,8 @@ var coffees = [
 var coffeeBody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var coffeeNameSearch = document.querySelector('#coffee-name-search');
+var coffeeNameSearch1 = document.querySelector("#coffee-name-search1");
 //From the first two functions: where's all that HTML we made in javascript? Throw it into tbody (
 coffeeBody.innerHTML = renderCoffees(coffees);
 
